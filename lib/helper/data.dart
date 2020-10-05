@@ -14,37 +14,37 @@ List<CategoryModel> getCategories(){
   // 2
   categoryModel = CategoryModel();
   categoryModel.categoryName = "Sports";
-  categoryModel.imageUrl = "https://unsplash.com/photos/eOvv4N6yNmk";
+  categoryModel.imageUrl = "http://absfreepic.com/absolutely_free_photos/small_photos/soccer-ball-on-grass-3000x2000_24882.jpg";
   category.add(categoryModel);
 
   // 3
   categoryModel = CategoryModel();
   categoryModel.categoryName = "Science";
-  categoryModel.imageUrl = "https://unsplash.com/photos/H9t723yPjYI";
+  categoryModel.imageUrl = "https://images.unsplash.com/photo-1554475901-4538ddfbccc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=2852&q=80";
   category.add(categoryModel);
 
   // 4
   categoryModel = CategoryModel();
   categoryModel.categoryName = "Technology";
-  categoryModel.imageUrl = "https://unsplash.com/photos/Im7lZjxeLhg";
+  categoryModel.imageUrl = "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1414&q=80";
   category.add(categoryModel);
 
   // 5
   categoryModel = CategoryModel();
   categoryModel.categoryName = "Health";
-  categoryModel.imageUrl = "https://unsplash.com/photos/hIgeoQjS_iE";
+  categoryModel.imageUrl = "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80";
   category.add(categoryModel);
 
   // 6
   categoryModel = CategoryModel();
   categoryModel.categoryName = "General";
-  categoryModel.imageUrl = "https://unsplash.com/photos/DFtjXYd5Pto";
+  categoryModel.imageUrl = "https://images.unsplash.com/photo-1499728603263-13726abce5fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80";
   category.add(categoryModel);
 
   // 7
   categoryModel = CategoryModel();
   categoryModel.categoryName = "Entertainment";
-  categoryModel.imageUrl = "https://unsplash.com/photos/8pwPnveOEiE";
+  categoryModel.imageUrl = "https://images.unsplash.com/photo-1596461010503-fc620ea96f52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80";
   category.add(categoryModel);
 
   return category;
