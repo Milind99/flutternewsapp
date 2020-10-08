@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutternewsapp/helper/data.dart';
 import 'package:flutternewsapp/model/category_model.dart';
 
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -34,8 +35,9 @@ class _HomeState extends State<Home> {
       body: Container(
         child: Column(
           children: <Widget>[
-            Text("Not showing", style: TextStyle(color: Colors.black),),
+
             Container(
+              padding: EdgeInsets.symmetric(horizontal: 16),
               height: 70,
               child: ListView.builder(
                   itemCount: categories.length,
@@ -49,7 +51,7 @@ class _HomeState extends State<Home> {
                     );
                   }),
             ),
-            Text("Showwwwwwwwwwwwwwwwww",style: TextStyle(color: Colors.black),),
+
           ],
         ),
       ),
@@ -64,18 +66,53 @@ class CategoryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Stack(
-        children: <Widget>[
-          Image.network(imageUrl, width: 120, height: 60,),
-          Container(
-            child: Text(categoryName, style: TextStyle(
-              color: Colors.blue
-            ),),
-          ),
-        ],
+    return GestureDetector(
+      onTap: (){
+        
+      },
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: Stack(
+          children: [
+          ClipRRect(
+        borderRadius: BorderRadius.circular(6),
+            child: Image.network(imageUrl, width: 120, height: 60,fit: BoxFit.fill,),
+      ),
+                Container(
+                  alignment: Alignment.center,
+                  width: 120, height: 60,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.black26
+                  ),
+                  child: Text(categoryName, style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500
+                  ),),
+                ),
+          ],
+  ),
       ),
     );
   }
 }
 
+class BlogTile extends StatelessWidget {
+
+  final String imageUrl, title, desc;
+  BlogTile({@required this.imageUrl,@required this.title,@required this.desc})
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Image.network(imageUrl),
+          Text(title),
+          Text(desc),
+        ],
+      ),
+    );
+  }
+}
