@@ -1,5 +1,5 @@
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html';
+import 'package:universal_html/html.dart' as html;
 import 'package:flutternewsapp/helper/news.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternewsapp/model/article_model.dart';

@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.12.2
+  universal_html: ^1.2.1
   image_downloader: ^0.20.1
   cached_network_image: ^2.0.0
   webview_flutter: ^0.3.19+9
