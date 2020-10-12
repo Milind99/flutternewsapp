@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutternewsapp/helper/data.dart';
 import 'package:flutternewsapp/helper/news.dart';
 import 'package:flutternewsapp/model/article_model.dart';
@@ -46,15 +47,18 @@ class _HomeState extends State<Home> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Flutter"),
-            Text("News", style: TextStyle( color: Colors.blue),)
+            Text("News"),
+            Text("App", style: TextStyle( color: Colors.blue),)
           ],
         ),
         elevation: 0.0,
       ),
       body: _loading ?  Center(
         child:Container(
-          child: CircularProgressIndicator(),
+          child: SpinKitFadingCube(
+            color: Colors.blue,
+            size: 120.0,
+          ),
         ),
         ) : SingleChildScrollView(
           child: Container(
@@ -183,6 +187,7 @@ class BlogTile extends StatelessWidget {
             Text(desc, style: TextStyle(
               color: Colors.black54
             ),),
+            SizedBox(height: 10,),
           ],
         ),
       ),

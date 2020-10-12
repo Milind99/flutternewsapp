@@ -1,4 +1,5 @@
 // ignore: avoid_web_libraries_in_flutter
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:flutternewsapp/helper/news.dart';
 import 'package:flutter/material.dart';
@@ -43,8 +44,8 @@ class _CategoryNewsState extends State<CategoryNews> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Flutter"),
-            Text("News", style: TextStyle( color: Colors.blue),)
+            Text("News"),
+            Text("App", style: TextStyle( color: Colors.blue),)
           ],
         ),
         actions: <Widget>[
@@ -60,10 +61,14 @@ class _CategoryNewsState extends State<CategoryNews> {
       ),
       body: _loading ?  Center(
         child:Container(
-          child: CircularProgressIndicator(),
+          child: SpinKitWanderingCubes(
+            color: Colors.blue,
+            size: 60.0,
+          ),
         ),
       ) : SingleChildScrollView(
         child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: <Widget>[
                   Container(
@@ -81,7 +86,7 @@ class _CategoryNewsState extends State<CategoryNews> {
                             url: articles[index].url,
                           );
                         }),
-              )
+              ),
             ],
           ),
         ),
@@ -125,6 +130,7 @@ class BlogTile extends StatelessWidget {
             Text(desc, style: TextStyle(
                 color: Colors.black54
             ),),
+            SizedBox(height: 10,),
           ],
         ),
       ),

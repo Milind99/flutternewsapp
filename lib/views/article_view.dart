@@ -21,8 +21,8 @@ class _ArticleViewState extends State<ArticleView> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-            Text("Flutter"),
-            Text("News", style: TextStyle( color: Colors.blue),)
+            Text("News"),
+            Text("App", style: TextStyle( color: Colors.blue),)
           ],
           ),
           actions: <Widget>[
@@ -39,11 +39,14 @@ class _ArticleViewState extends State<ArticleView> {
       body:Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: WebView(
-          initialUrl: widget.blogUrl,
-          onWebViewCreated: ((WebViewController webViewController){
-            _completer.complete(webViewController);
-          }),
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: WebView(
+            initialUrl: widget.blogUrl,
+            onWebViewCreated: ((WebViewController webViewController){
+              _completer.complete(webViewController);
+            }),
+          ),
         ),
         ),
     );
